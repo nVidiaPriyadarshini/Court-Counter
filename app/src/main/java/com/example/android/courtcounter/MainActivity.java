@@ -7,11 +7,13 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int scoreTeamA = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(8);
+        displayForTeamA(scoreTeamA);
     }
 
     /**
@@ -26,20 +28,23 @@ public class MainActivity extends AppCompatActivity {
      * Displays a score of 3 when +3 is clicked
      */
     public void threePointsForTeamA(View view){
-        displayForTeamA(3);
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
     }
 
     /**
      * Displays a score of 2 when +2 is clicked
      */
     public void twoPointsForTeamA(View view){
-        displayForTeamA(2);
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
     }
 
     /**
      * Displays a score of 1 when free throw is clicked
      */
     public void onePointForTeamA(View view){
-        displayForTeamA(1);
+        scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
     }
 }
